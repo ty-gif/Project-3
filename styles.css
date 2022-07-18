@@ -1,0 +1,58 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+
+h1 {
+    font-size: 36px; 
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.header{
+    background-color: white;
+}
+
+    .header__form {
+        background-color: #9356DC;
+
+    }
+
+    .header__nav {
+        height: 10px;
+        
+
+    } 
+
+.nav-header {
+    background-color:lightgray;
+}
+
+.menu {
+    background-color: lightgray;
+}
+
+.restaurants {
+    width:10%;
+    height:10%;
+
+}
+
+.rest-btn {
+    padding:15px 30px;
+    border:none;
+    background-color:orange;
+}
+
+.rest{
+    background-color: gray;
+}
+
+.rest-img {
+    width:100px;
+    height:30px;
+}
