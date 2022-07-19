@@ -1,0 +1,59 @@
+$primarycolor:#9356DC;
+$secondarycolor:#FF79DA;
+$teritarycolor:#99E2D0;
+
+*{
+    margin:0;
+    padding:0;
+}
+
+.header {
+    background-color: $primarycolor;
+
+
+    &__form {
+        background-color: #9356DC;
+
+    }
+   
+    .header__nav {
+        height: 20px;
+        
+
+    }
+
+}
+
+
+
+.nav-header {
+    background-color:lightgray;
+}
+
+body {
+    font-family: 'Roboto' 'sans-serif';
+}
+.menu {
+    background-color: lightgray;
+}
+
+.restaurants {
+    width:10%;
+    height:10%;
+
+}
+
+.rest-btn {
+    padding:15px 30px;
+    border:none;
+    background-color:orange;
+}
+
+.rest{
+    background-color: gray;
+}
+
+.rest-img {
+    width:100px;
+    height:30px;
+}

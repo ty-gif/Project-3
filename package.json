@@ -1,0 +1,11 @@
+{
+  "name": "scss_t_proj",
+  "version": "1.0.0",
+  "description": "Food Menu website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tyrese Mccaskill",
+  "license": "ISC"
+}
