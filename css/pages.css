@@ -42,6 +42,37 @@ h3 {
   transform-origin: 0 0;
 }
 
+.outline {
+  position: absolute;
+  opacity: 100%;
+  transition: opacity 3000ms;
+}
+
+.solid {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 3000ms;
+  background: linear-gradient(rgb(250, 184, 66), #31A);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: rgb(250, 184, 66);
+}
+
+:hover .solid {
+  opacity: 100%;
+  transition: opacity 3000ms;
+  background: linear-gradient(rgb(250, 184, 66), #31A);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: rgb(250, 184, 66);
+}
+
+.head_span {
+  display: block;
+}
+
 .header__line {
   position: relative;
   -webkit-text-decoration: underline 3px #99E2D0;
@@ -79,7 +110,6 @@ h3 {
 
 .menu {
   display: flex;
-  margin-top: -75px;
   margin-left: 10px;
   gap: 10px;
   padding-bottom: 40px;
@@ -205,6 +235,15 @@ h3 {
   transition: transform 1500ms;
 }
 
+.trigger {
+  display: flex;
+  width: 100%;
+  /*   overflow: hidden; */
+  -webkit-animation: slide-show 7000ms forwards;
+          animation: slide-show 7000ms forwards;
+  /*   margin: 10px; */
+}
+
 .whatever {
   border-radius: 55px;
   color: white;
@@ -212,14 +251,10 @@ h3 {
   height: 50px;
   margin-bottom: 30px;
   margin-top: 40px;
-  margin-left: 80px;
-  padding: 2px 0px 0px 40px;
+  margin-left: 90px;
   background-image: linear-gradient(#FF79DA, #9356DC);
   border: none;
   box-shadow: 0.3em 0.5em 0.9em #bfbfbf;
-}
-.whatever__p {
-  margin-left: -40px;
 }
 
 .load {
@@ -322,6 +357,27 @@ h3 {
   margin-left: -3px;
 }
 
+@-webkit-keyframes slide-show {
+  0% {
+    margin-top: 75px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-show {
+  0% {
+    margin-top: 75px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
 @-webkit-keyframes goaway {
   0% {
     z-index: 100;
@@ -336,7 +392,6 @@ h3 {
     opacity: 0;
   }
 }
-
 @keyframes goaway {
   0% {
     z-index: 100;
@@ -388,16 +443,26 @@ h3 {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .head_span {
+    display: inline;
+  }
   .header {
-    margin-left: 250px;
+    margin-left: 230px;
+  }
+  .header__img {
+    margin-left: 110px;
+  }
+  .header__title {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
   }
   .fas.fa-arrow-left::before {
     margin-left: -220px;
   }
   .target {
     left: 93%;
-    top: 5px;
-    bottom: -15px;
+    top: -30px;
   }
   body {
     background-color: #F8F8F8;
@@ -411,35 +476,26 @@ h3 {
   .menu {
     margin-top: 10px;
     flex-direction: row;
-    width: 100%;
   }
   .menu__head {
-    margin-left: 270px;
+    margin-left: 280px;
     border-radius: 0px;
     padding-top: 0px;
     margin-top: 30px;
     padding-bottom: 0px;
     margin-bottom: 0px;
   }
-  .header__title {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-    margin-top: 0;
-  }
   .top {
     display: flex;
     border-radius: 70px;
     flex-direction: column;
     margin-top: -30px;
-    background-color: #F8F8F8;
   }
   .main {
     flex-direction: row;
   }
   .desserts {
     flex-direction: row;
-    width: 100%;
   }
   .card {
     flex-direction: row;
@@ -447,6 +503,7 @@ h3 {
   }
   .card__price span {
     top: 50%;
+    left: 10%;
   }
   .fas.fa-euro-sign::before {
     margin-left: 30px;
@@ -470,28 +527,54 @@ h3 {
 }
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
   .header {
-    margin-left: 400px;
+    margin-left: 300px;
+  }
+  .head_span {
+    display: inline;
+  }
+  .header__title {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  .card__price span {
+    top: 50%;
+    left: 5%;
+  }
+  .menu {
+    flex-direction: row;
+  }
+  .menu__head {
+    margin-left: 350px;
+    border-radius: 0px;
+    padding-top: 0px;
+    margin-top: 80px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  .main {
+    flex-direction: row;
+  }
+  .desserts {
+    display: flex;
+    flex-direction: row;
+  }
+  .target {
+    top: -30px;
+    left: 95%;
   }
   .fas.fa-arrow-left::before {
-    margin-left: -380px;
-  }
-  .far.fa-heart::before {
-    margin-left: 875px;
-  }
-  .card__checkmark {
-    margin-left: -10px;
-  }
-  .card__checkholder {
-    width: 20%;
+    margin-left: -290px;
   }
   .whatever {
-    margin-left: 500px;
+    margin-left: 400px;
   }
   .footer__img {
-    margin-left: 530px;
+    margin-left: 440px;
   }
   .footer__info {
     flex-direction: row;
-    margin-left: 320px;
+    margin-left: 250px;
   }
 }/*# sourceMappingURL=pages.css.map */
