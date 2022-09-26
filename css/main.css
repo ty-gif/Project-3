@@ -239,7 +239,6 @@ body {
   display: flex;
   padding-bottom: 50px;
   background-color: #F8F8F8;
-  margin-left: -20px;
   flex-direction: column;
   align-items: center;
 }
@@ -268,6 +267,11 @@ body {
 .rest .rest__menu p {
   font-weight: 100;
 }
+.rest__link {
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+}
 .rest__head {
   margin-left: 15px;
   padding-top: 50px;
@@ -275,7 +279,8 @@ body {
 .rest__btn {
   border-radius: 55px;
   width: 190px;
-  padding: 3px 5px 2px 40px;
+  color: white;
+  padding: 10px 11px 10px 10px;
   background-image: linear-gradient(#FF79DA, #9356DC);
   border: none;
   box-shadow: 0.3em 0.5em 0.9em #bfbfbf;
@@ -290,6 +295,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   margin-left: 10px;
+  border-radius: 50%;
   background-color: #ffffff;
 }
 .rest__imgs {
@@ -318,7 +324,7 @@ body {
 }
 .rest__card {
   background-color: #ffffff;
-  width: 90%;
+  width: 95%;
   border-radius: 10px;
   margin-left: 15px;
   box-shadow: 0.1em 0.2em 0.2em #e6e6e6;
@@ -327,7 +333,8 @@ body {
 .solid {
   position: absolute;
   opacity: 0;
-  transition: opacity 3000ms;
+  font-size: 1.25rem;
+  transition: opacity 3000ms 100% width;
   background: linear-gradient(rgb(250, 184, 66), #31A);
   background-clip: text;
   -webkit-background-clip: text;
@@ -339,12 +346,13 @@ body {
   position: relative;
   outline: solid blue 0px;
   top: -50px;
-  left: 85%;
+  left: 90%;
   font-size: 1.5rem;
 }
 
 .target:hover .solid {
   opacity: 100%;
+  font-size: 1.5rem;
   transition: opacity 3000ms;
   background: linear-gradient(rgb(250, 184, 66), #31A);
   background-clip: text;
@@ -362,6 +370,7 @@ body {
 .target:hover .outline {
   opacity: 0;
   transition: opacity 3000ms;
+  font-size: 1.5rem;
 }
 
 .new {
@@ -369,7 +378,7 @@ body {
   top: 15px;
   bottom: 90%;
   width: 50px;
-  margin-left: 235px;
+  margin-left: 240px;
   padding: 5px 10px 5px 30px;
   background-color: #99E2D0;
   color: #419d86;
@@ -409,4 +418,77 @@ body {
   height: 17px;
   margin-top: 30px;
   margin-left: 15px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    margin-left: -90px;
+  }
+  .header__form {
+    margin-left: -85px;
+  }
+  .new {
+    left: 54%;
+  }
+  .menu {
+    padding-bottom: 15px;
+  }
+  .menu__info {
+    margin-left: -550px;
+  }
+  .menu__infos {
+    margin-left: -510px;
+  }
+  .menu__p {
+    margin-left: -510px;
+  }
+  .rest__btn {
+    position: absolute;
+    left: 70%;
+    bottom: 90%;
+  }
+  .target {
+    left: 95%;
+  }
+  .far.fa-heart outline::before {
+    margin-left: 120px;
+  }
+  .far.fa-heart .solid::before {
+    margin-left: 120px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .header {
+    margin-left: -90px;
+  }
+  .header__form {
+    margin-left: -85px;
+  }
+  .new {
+    left: 54%;
+  }
+  .menu {
+    padding-bottom: 15px;
+    margin-left: -522px;
+  }
+  .menu__info {
+    margin-left: -250px;
+  }
+  .menu__infos {
+    margin-left: -210px;
+  }
+  .rest__btn {
+    position: absolute;
+    left: 70%;
+    bottom: 90%;
+  }
+  .target {
+    left: 95%;
+  }
+  .far.fa-heart outline::before {
+    margin-left: 120px;
+  }
+  .far.fa-heart .solid::before {
+    margin-left: 120px;
+  }
 }/*# sourceMappingURL=main.css.map */
